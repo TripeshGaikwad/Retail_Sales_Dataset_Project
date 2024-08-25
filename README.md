@@ -24,7 +24,7 @@ df = pd.DataFrame(a)
 gb = df.groupby("Product Category").agg({"Total Amount":"sum"})
 #print(gb)
 
-# visualising using matplotlib and seaborn
+# Visualising using Matplotlib and Seaborn
 plt.bar(gb.index, gb["Total Amount"])
 plt.title("Sales Based On Product Category")
 plt.xticks(rotation = 90)
@@ -56,7 +56,7 @@ plt.ylabel("Purchase Amount")
 plt.show()
 
 
-# Create a violin plot with Seaborn
+# Creating a violin plot with Seaborn
 sns.violinplot(y="Price per Unit", data=df)
 plt.title("Product Pricing That People Usually Buy")
 plt.ylabel("Price Per Unit")
