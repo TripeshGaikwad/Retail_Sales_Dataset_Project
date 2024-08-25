@@ -10,11 +10,10 @@ a = pd.read_csv("C:/Users/Sonu/OneDrive/Desktop/retail_sales_dataset.csv")
 df = pd.DataFrame(a)
 #print(df)
 
+# Checking data for duplicates and null values
 #print(a.info())
 #a.describe()
-
 #print(a.isnull().sum())
-
 #print(a["Customer ID"].duplicated().sum())
 #print(a.drop_duplicates("Customer ID"))
 
@@ -25,7 +24,7 @@ df = pd.DataFrame(a)
 gb = df.groupby("Product Category").agg({"Total Amount":"sum"})
 #print(gb)
 
-# visualising
+# visualising using matplotlib and seaborn
 plt.bar(gb.index, gb["Total Amount"])
 plt.title("Sales Based On Product Category")
 plt.xticks(rotation = 90)
@@ -35,7 +34,7 @@ plt.show()
 
 
 gb1 = df.groupby("Gender").agg({"Total Amount":"sum"})
-# print(gb1)
+#print(gb1)
 
 plt.bar(gb1.index, gb1["Total Amount"])
 plt.title("Sales Based On Gender")
