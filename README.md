@@ -56,7 +56,7 @@ plt.ylabel("Purchase Amount")
 plt.show()
 
 
-# Creating a violin plot with Seaborn
+#Creating a violin plot with Seaborn
 sns.violinplot(y="Price per Unit", data=df)
 plt.title("Product Pricing That People Usually Buy")
 plt.ylabel("Price Per Unit")
